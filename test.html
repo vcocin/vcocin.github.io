@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146891163-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-146891163-1');
+
+        window.onload = function () {
+            var elements = document.querySelectorAll('a[data-group=ga]');
+            for (var i = 0; i < elements.length; i++) {
+                console.log(elements[i].dataset.key);
+                elements[i].addEventListener('click', function () {
+                    gtag('event', 'click', {
+                        'event_category': '電子名片連結',
+                        'event_label': elements[i].dataset.key
+                    });
+                });
+            };
+        };
+    </script>
+</head>
+<body>
+    <a name="card-2" title="日盛證券線上預約開戶-影音專區" id="card-2"></a>
+    <div class="card-2 container-fluid">
+        <div class="col-sm-12 big-movie">
+            <iframe width="" height="auto" id="Url0" name="Url0" src="test.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" runat="server" scrolling="no" allowfullscreen></iframe>
+        </div>
+    </div>
+    <aside class="scroll-fix scroll-fix-none">
+        <a href="#" onclick="$('html,body').animate({ scrollTop: $('.card-3').offset().top}, 'slow'); return false;" data-group="ga" data-key="我要開戶">
+            <i class="glyphicon glyphicon-user"></i>
+            <p>我要</p>
+            <p>開戶</p>
+        </a>
+
+        <a id="shareFB" href="https://www.facebook.com/Jihsunny/" target="_blank" runat="server" data-group="ga" data-key="FB分享">
+            <img src="img/jsun-fb.png" alt="" />
+        </a>
+
+        <a id="shareLine" href="https://www.jihsun.com.tw/Static/JsunLine" target="_blank" runat="server" data-group="ga" data-key="LINE分享">
+            <img src="img/jsun-line.png" alt="" />
+        </a>
+
+        <hr />
+
+        <a href="#" onclick="$('html,body').animate({ scrollTop: $('html').offset().top}, 'slow'); return false;">
+            <i class="glyphicon glyphicon-triangle-top"></i>
+        </a>
+    </aside>
+</body>
+</html>
