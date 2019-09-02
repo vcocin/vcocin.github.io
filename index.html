@@ -19,7 +19,7 @@
                 elements[i].addEventListener('click', function () {
                     gtag('event', 'click', {
                         'event_category': '電子名片連結',
-                        'event_label': elements[i].dataset.key
+                        'event_label': this.dataset.key
                     });
                 });
             };
