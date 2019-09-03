@@ -18,6 +18,7 @@
             for (var i = 0; i < elements.length; i++) {
                 var a = elements[i].dataset.key
                 elements[i].addEventListener('click', function () {
+                    console.log(a);
                     gtag('event', 'click', {
                         'event_category': '電子名片連結',
                         'event_label': a
