@@ -4,7 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.iframetracker.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146891163-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -16,14 +17,25 @@
         window.onload = function () {
             var elements = document.querySelectorAll('[data-group=ga]');
             for (var i = 0; i < elements.length; i++) {
-                elements[i].addEventListener('click', function (e) {
+                var a = elements[i].dataset.key
+                elements[i].addEventListener('click', function () {
                     gtag('event', 'click', {
                         'event_category': '電子名片連結',
-                        'event_label': this.dataset.key
+                        'event_label': a
                     });
                 });
             };
         };
+        jQuery(document).ready(function ($) {
+            $('video1').iframeTracker({
+                blurCallback: function () {
+                    gtag('event', 'click', {
+                        'event_category': '電子名片連結',
+                        'event_label': this.dataset.key
+                    });
+                }
+            });
+        });
     </script>
 </head>
 <body>
