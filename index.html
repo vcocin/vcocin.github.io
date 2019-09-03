@@ -6,6 +6,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script src="js/jquery.iframetracker.min.js"></script>
     <script src="js/jquery.iframetracker.js"></script>
+    <script src="js/jquery-1.12.2.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146891163-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -25,7 +26,7 @@
                     });
                 });
             };
-            $('video1').iframeTracker({
+            $('.video1 iframe').iframeTracker({
                 blurCallback: function () {
                     gtag('event', 'click', {
                         'event_category': '電子名片連結',
@@ -40,7 +41,7 @@
     <input type="button" data-group="ga" data-key="資料送出" />
     <a name="card-2" title="日盛證券線上預約開戶-影音專區" id="card-2"></a>
     <div class="card-2 container-fluid">
-        <div class="col-sm-12 big-movie">
+        <div class="video1">
             <iframe data-group="ga" data-key="影片1" width="" height="auto" id="Url0" name="Url0" src="test.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" runat="server" scrolling="no" allowfullscreen></iframe>
         </div>
     </div>
