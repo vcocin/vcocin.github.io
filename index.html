@@ -26,6 +26,8 @@
                     });
                 });
             };
+        };
+        jQuery(document).ready(function ($) {
             $('.video1 iframe').iframeTracker({
                 blurCallback: function () {
                     gtag('event', 'click', {
@@ -34,7 +36,7 @@
                     });
                 }
             });
-        };
+        });
     </script>
 </head>
 <body>
