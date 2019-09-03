@@ -32,10 +32,18 @@
                 blurCallback: function () {
                     gtag('event', 'click', {
                         'event_category': '電子名片連結',
-                        'event_label': this.dataset.key
+                        'event_label': '111'
                     });
                 }
             });
+            $('.video1 iframe').iframeTracker({
+		        blurCallback: function(event){
+			        gtag('event', 'click', {
+                        'event_category': '電子名片連結',
+                        'event_label': '111'
+                    });
+		        }
+	        });
         });
     </script>
 </head>
