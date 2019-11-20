@@ -1,72 +1,574 @@
-﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script src="js/jquery.iframetracker.js"></script>
-    <script src="js/jquery-1.12.2.min.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146891163-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
 
-        gtag('config', 'UA-146891163-1');
+<head>
 
-        window.onload = function () {
-            var elements = document.querySelectorAll('[data-group=ga]');
-            for (var i = 0; i < elements.length; i++) {
-                var a = elements[i].dataset.key
-                elements[i].addEventListener('click', function () {
-                    gtag('event', 'click', {
-                        'event_category': '電子名片連結',
-                        'event_label': a
-                    });
-                });
-            };
-        };
-        jQuery(document).ready(function ($) {
-            $('.video1 iframe').iframeTracker({
-		        blurCallback: function(event){
-				console.log(1);
-			        gtag('event', 'click', {
-                        'event_category': '電子名片連結',
-                        'event_label': '111'
-                    });
-		        }
-	        });
-        });
-    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <!--web icon-->
+    <link href="img/favicon.ico" rel="shortcut icon" />
+    <link href="img/favicon.ico" rel="bookmark" />
+
+    <title>日盛證券-投資人的首選理財夥伴，提供線上開戶、股票、ETF基金、期貨、投顧分析資訊，複委託海外股票等電子交易平台及行動服務。</title>
+
+    <!-- CSS基礎結構 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!--CSS plugin-->
+    <!--animate動畫CSS-->
+    <link href="css/animate.min.css" rel="stylesheet" />
+    <!--背景vedio插件的css 官方網址-- https://github.com/souravm84/vidbacking-->
+    <link href="css/jquery.vidbacking.min.css" rel="stylesheet" />
+    <!--輪播owl.carousel插件的CSS 官方網址-- https://owlcarousel2.github.io/OwlCarousel2/demos/demos.html-->
+    <link href="css plugin/owl-carousel/owl.carousel.min.css" rel="stylesheet">
+    <link href="css plugin/owl-carousel/owl.theme.default.min.css" rel="stylesheet">
+    <link href="css plugin/owl-carousel/owl.theme.green.min.css" rel="stylesheet">
+    <meta property="og:title" content="日盛證券-預約開戶，股票投資，理財規劃的第一步" />
+    <meta property="og:description" content="日盛證券提供優質投資理財服務，您可透過此表單完成開戶" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://vmjsmarket.jihsun.com.tw/MarketNet/BusinessCard/img/300x300.png" />
+
+    <!--CSS自訂-->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--css本頁-->
+    <style>
+
+    </style>
+    <script></script>
 </head>
-<body>
-    <input type="button" data-group="ga" data-key="資料送出" />
-    <a name="card-2" title="日盛證券線上預約開戶-影音專區" id="card-2"></a>
-    <div class="card-2 container-fluid">
-        <div class="video1">
-            <iframe data-group="ga" data-key="影片1" width="" height="auto" id="Url0" name="Url0" src="test.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" runat="server" scrolling="no" allowfullscreen></iframe>
+
+<body id="" class="">
+
+    <!-- Navigation -->
+    <nav class="new-navbar navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="new-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">選單切換</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="new-navbar-brand navbar-brand" href="https://www.jihsun.com.tw/" alt="日盛證券-投資人的首選理財夥伴" title="日盛證券-投資人的首選理財夥伴">
+                <img class="" src="img/logo.png" alt="日盛證券-投資人的首選理財夥伴" title="日盛證券-投資人的首選理財夥伴">
+            </a>
+        </div>
+
+        <!-- 手機隱藏選單區 -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <!-- 右選單 -->
+            <ul class="nav navbar-nav navbar-right new-nav-menu">
+                <li class="">
+                    <a href="http://www.jsun.com/" title="日盛證券-官網連結">
+                        <img src="img/jsunweb.png" alt="日盛證券-官網連結">
+                        日盛金控
+                    </a>
+                </li>
+                <li class="">
+                    <a href="http://www.jihsun.com.tw/md/event/jsun_school/contactus.html" title="日盛證券-全國據點分佈連結">
+                        <img src="img/jsun-local.png" alt="日盛證券-全國據點分佈連結圖示">
+                        服務據點
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.jsun.com.tw/About/Winner" title="日盛證券-得獎紀事連結" target="_blank">
+                        <img src="img/jsun-story.png" alt="日盛證券-得獎紀事連結圖示">
+                        得獎紀事
+                    </a>
+                </li>
+                <li>
+                    <ul class="nav-icon">
+                        <li>
+                            <a href="https://www.facebook.com/Jihsunny/" title="日盛證券-官方粉絲團連結" target="_blank">
+                                <img src="img/jsun-fb.png" alt="日盛證券-官方粉絲團連結圖示">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.jihsun.com.tw/Static/JsunLine" title="日盛證券-官方LINE帳號連結" target="_blank">
+                                <img src="img/jsun-line.png" alt="日盛證券-官方LINE帳號連結圖示">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCx_6Hs1BX7xxeq_s9BiGa-A" title="日盛證券-YOUTUBE影音專區連結" target="_blank">
+                                <img src="img/jsun-youtube.png" alt="日盛證券-YOUTUBE影音專區連結圖示">
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 搜尋表單先隱藏，要用時再打開 -->
+            <!--<form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="請輸入關鍵字">
+                </div>
+                <button type="submit" class="btn btn-default">搜尋</button>
+            </form>-->
+
+        </div>
+        <!-- 手機隱藏選單區結束 -->
+    </nav>
+
+    <!-- Movie area -->
+    <header class="container-fluid head-video" id="video-back">
+        <!--白點遮色片，打開時記得配合css-->
+        <!--<div class="mask"></div>-->
+
+        <video poster="" autoplay muted loop class="vidbacking">
+            <source src="test.mp4" type="video/mp4">
+            <source src="test.mp4" type="video/webm">
+        </video>
+
+        <img src="img/opacity.png" alt="測試用背景-不可見" class="img-responsive">
+
+        <!--<h1>Vidbacking Demo of -div- Background</h1>-->
+    </header>
+
+    <!-- Page Content 1 四大特色-->
+    <div class="container key-point hidden-xs">
+        <div class="row">
+
+            <div class="col-sm-3" onclick="$('html,body').animate({ scrollTop: $('.five-highlight').offset().top - 58 }, 'slow'); return false;">
+                投資好工具
+            </div>
+
+            <div class="col-sm-3" onclick="$('html,body').animate({ scrollTop: $('.jsun-vedio').offset().top - 58 }, 'slow'); return false;">
+                學習好有趣
+            </div>
+
+            <div class="col-sm-3" onclick="$('html,body').animate({ scrollTop: $('.banner-slide').offset().top - 58 }, 'slow'); return false;">
+                開戶好多利
+            </div>
+
+            <div class="col-sm-3" onclick="$('html,body').animate({ scrollTop: $('.company-info').offset().top - 58 }, 'slow'); return false;">
+                服務好專業
+            </div>
+
+        </div><!--row end-->
+    </div>
+
+    <!-- Page Content 2 五大特點-->
+    <div class="row five-highlight wow fadeIn">
+        <div class="container">
+            <div class="row">
+                <!--五大特點標題-->
+                <h2 class="col-sm-12 text-center">投資好工具 推薦給您</h2>
+
+                <!--五大特點內容-->
+                <div class="WIDTH-20">
+                    <div class="col-sm-12 col-xs-4">
+                        <img class="img-responsive highlight-img" src="img/appicon-1.png" alt="日盛smart app 下載圖示">
+                    </div>
+                    <div class="col-sm-12 col-xs-4 text-center">
+                        <h3>SMART</h3>
+                        <p>輕鬆設定<br>守住獲利</p>
+                    </div>
+                    <div class="col-sm-12 col-xs-4">
+                        <a href="https://play.google.com/store/apps/details?id=tw.com.jihsun.smart" title="日盛smart app，googlepaly連結">
+                            <img class="img-responsive highlight-app" src="img/googleplayapp.png" alt="日盛smart app，googlepaly下載圖">
+                        </a>
+                        <a href="https://apps.apple.com/tw/app/%E6%97%A5%E7%9B%9Bsmart/id903793521" title="日盛smart app，app store連結">
+                            <img class="img-responsive highlight-app" src="img/appstoreapp.png" alt="日盛smart app，app store下載圖">
+                        </a>
+                    </div>
+                </div>
+                <div class="WIDTH-20">
+                    <div class="col-sm-12 col-xs-4">
+                        <img class="img-responsive highlight-img" src="img/appicon-2.png" alt="日盛營業員online app 下載圖示">
+                    </div>
+                    <div class="col-sm-12 col-xs-4">
+                        <h3>Online</h3>
+                        <p>您的隨身<br>營業員</p>
+                    </div>
+                    <div class="col-sm-12 col-xs-4">
+                        <a href="https://play.google.com/store/apps/details?id=com.js.online" title="日盛營業員online app，googleplay連結">
+                            <img class="img-responsive highlight-app" src="img/googleplayapp.png" alt="日盛營業員online app，googleplay下載圖">
+                        </a>
+                        <a href="https://apps.apple.com/tw/app/%E6%97%A5%E7%9B%9Bonline/id688133470" title="日盛營業員online app，app store連結">
+                            <img class="img-responsive highlight-app" src="img/appstoreapp.png" alt="日盛營業員online app，app store下載圖">
+                        </a>
+                    </div>
+                </div>
+                <div class="WIDTH-20">
+                    <div class="col-sm-12 col-xs-4">
+                        <img class="img-responsive highlight-img" src="img/appicon-3.png" alt="日盛wts火速看盤 app 下載圖示">
+                    </div>
+                    <div class="col-sm-12 col-xs-4">
+                        <h3>WTS</h3>
+                        <p>火速看盤<br>輕鬆交易</p>
+                    </div>
+                    <div class="col-sm-12 col-xs-4">
+                        <a href="https://play.google.com/store/apps/details?id=com.sun5" title="日盛wts火速看盤 googleplay連結">
+                            <img class="img-responsive highlight-app" src="img/googleplayapp.png" alt="日盛wts火速看盤 googleplay下載圖">
+                        </a>
+                        <a href="https://apps.apple.com/tw/app/%E6%97%A5%E7%9B%9B%E8%A1%8C%E5%8B%95%E4%B8%8B%E5%96%AEwts/id1021542503" title="日盛wts火速看盤 app store連結">
+                            <img class="img-responsive highlight-app" src="img/appstoreapp.png" alt="日盛wts火速看盤 app store下載圖">
+                        </a>
+                    </div>
+                </div>
+                <div class="WIDTH-20">
+                    <div class="col-sm-12 col-xs-4">
+                        <img class="img-responsive highlight-img" src="img/appicon-4.png" alt="日盛HTS 快易點下載圖示">
+                    </div>
+                    <div class="col-sm-12 col-xs-4">
+                        <h3>HTS</h3>
+                        <p>多樣化術指標<br>與報價分析</p>
+                    </div>
+                    <div class="col-sm-12 col-xs-4">
+                        <a href="http://www.hts.com.tw/HTS_Platinum.exe" title="日盛HTS 快易點下載連結" target="_blank">
+                            <img class="img-responsive highlightdownload" src="img/highlight-down.png" alt="日盛HTS 快易點下載示意">
+                        </a>
+                    </div>
+                </div>
+                <div class="WIDTH-20">
+                    <div class="col-sm-12 col-xs-4">
+                        <img class="img-responsive highlight-img" src="img/appicon-5.png" alt="日盛HTS2 多易點下載圖示">
+                    </div>
+                    <div class="col-sm-12 col-xs-4">
+                        <h3>HTS2</h3>
+                        <p>靈活彈性<br>專業設定</p>
+                    </div>
+                    <div class="col-sm-12 col-xs-4">
+                        <a href="https://jsmarket.jihsun.com.tw/hts2/HTS2_Installer.exe" title="日盛HTS2 多易點下載連結" target="_blank">
+                            <img class="img-responsive highlightdownload" src="img/highlight-down.png" alt="日盛HTS2 多易點下載示意">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-12">
+                    <h4 class="text-center">其他專業理財 工具專區</h4>
+                </div>
+
+                <div class="WIDTH-50">
+                    <div class="col-xs-4">
+                        <img class="img-responsive highlight-img" src="img/appicon-6.png" alt="日盛證券-基金通網站連結圖示">
+                    </div>
+                    <div class="col-xs-4">
+                        <h3>基金通</h3>
+                        <p>財富管理<br>理財一點通</p>
+                    </div>
+                    <div class="col-sm-12 col-xs-4">
+                        <!--<a href="https://www.jihsun.com.tw/wealth/" title="日盛基金通網站連結" target="_blank" class="myButton">前往網站</a>-->
+                        <a href="https://play.google.com/store/apps/details?id=tw.com.jihsun.moneydj" title="日盛證券-基金通app連結">
+                            <img class="img-responsive highlight-app" src="img/googleplayapp.png" alt="日盛證券-基金通app連結圖示">
+                        </a>
+                        <a href="https://apps.apple.com/tw/app/%E6%97%A5%E7%9B%9B%E5%9F%BA%E9%87%91%E9%80%9A/id1193528016" title="日盛smart app，app store連結">
+                            <img class="img-responsive highlight-app" src="img/appstoreapp.png" alt="日盛smart app，app store下載圖">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="WIDTH-50">
+                    <div class="col-xs-4">
+                        <img class="img-responsive highlight-img" src="img/appicon-7.png" alt="日盛證券-全球快易通圖示">
+                    </div>
+                    <div class="col-xs-4">
+                        <h3>快易通</h3>
+                        <p>全球交易<br>最安心</p>
+                    </div>
+                    <div class="col-sm-12 col-xs-4">
+                        <a href="https://www.jihsun88.com/" title="日盛快易通網站連結" target="_blank" class="myButton">前往網站</a>
+                    </div>
+                </div>
+
+            </div><!--row end-->
         </div>
     </div>
-    <aside class="scroll-fix scroll-fix-none">
-        <a href="#" onclick="$('html,body').animate({ scrollTop: $('.card-2').offset().top}, 'slow'); return false;" data-group="ga" data-key="我要開戶">
+
+    <!-- Page Content 3 youtube-->
+    <div class="container-fluid jsun-vedio wow fadeIn">
+        <div class="container">
+            <!--content -->
+            <div class="row">
+
+                <h2 class="text-center">學習好有趣 投資SO EASY</h2>
+                <h3 class="text-center">
+                    <a href="https://www.youtube.com/channel/UCx_6Hs1BX7xxeq_s9BiGa-A" title="日盛證券YOUTUBE官方連結" target="_blank" class="">
+                        <img src="img/flat_youtube_wallpaper_by_oscagapotes-d6o637w@2x.png" alt="日盛證券YOUTUBE官方連結圖">
+                        更多YOUTUBE頻道
+                    </a>
+                </h3>
+
+                <div class="clearfix"></div>
+
+                <div class="col-xs-12 col-sm-6">
+                    <iframe id="url0" width="" height="auto" src="https://www.youtube.com/embed/ZqyZ3FwhNeE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="col-xs-12 col-sm-6">
+                    <iframe id="url1" width="" height="auto" src="https://www.youtube.com/embed/fFHgBBUbjMI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 hidden-xs">
+                    <iframe id="url2" width="" height="auto" src="https://www.youtube.com/embed/q87D9aDy7ag" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 hidden-xs">
+                    <iframe id="url3" width="" height="auto" src="https://www.youtube.com/embed/FaoCfCSsSjI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+            </div><!--row end-->
+        </div>
+    </div>
+
+    <!-- Page Content 4 輪播區-->
+    <div class="container banner-slide wow fadeIn">
+        <!--content -->
+        <div class="row">
+            <h2 class="col-sm-12 text-center">開戶好多利 給您多更多</h2>
+
+            <div class="col-xs-12">
+                <div id="Activety" class="owl-carousel owl-theme">
+                    <!--<div class="item">
+                        <a class="img-head EqualHeight" href="https://323go.twse.com.tw/front/index" title="">
+                            <img src="https://www.jihsun.com.tw/Image/CMS01_Content/80f79cc8-e2d4-44db-b331-e4d0a8a01b35" alt="輪播圖片圖示" class="slide-img">
+                        </a>
+                        <h5 class="">逐筆交易擬真平台</h5>
+                        <p class="">好禮大方送 千萬獎品等你拿</p>
+                    </div>
+                    <div class="item">
+                        <a class="img-head EqualHeight" href="https://jsmarket.jihsun.com.tw/Course/Main;areaID=A" title="">
+                            <img src="https://www.jihsun.com.tw/Image/CMS01_Content/f28f43e8-fab8-4644-9ada-3d9b54a2d61e" alt="輪播圖片圖示" class="slide-img">
+                        </a>
+                        <h5 class="">日盛投資理財講座</h5>
+                        <p class="">邀您一同探索學習</p>
+                    </div>
+                    <div class="item">
+                        <a class="img-head EqualHeight" href="https://jsmarket.jihsun.com.tw/futures/stock0401/index.html" title="">
+                            <img src="https://www.jihsun.com.tw/Image/CMS01_Content/6f756cca-a323-4609-b533-bbf200142e29" alt="輪播圖片圖示" class="slide-img">
+                        </a>
+                        <h5 class="">新戶集紅利，點點購物金！</h5>
+                        <p class="">線上享便利，成雙加碼去！</p>
+                    </div>
+                    <div class="item">
+                        <a class="img-head EqualHeight" href="https://jsmarket.jihsun.com.tw/futures/course/index.html" title="">
+                            <img src="https://www.jihsun.com.tw/Image/CMS01_Content/7d4bdea6-55fc-475b-8fcd-9b6918e4e78a" alt="輪播圖片圖示" class="slide-img">
+                        </a>
+                        <h5 class="">日盛期權學堂</h5>
+                        <p class="">從學習找到投資理財契機</p>
+                    </div>-->
+                </div>
+            </div>
+
+        </div><!--row end-->
+    </div>
+
+    <!-- Page Content 5-->
+    <div class="container-fluid company-info wow fadeIn">
+        <!--content -->
+        <div class="container">
+
+            <div class="col-sm-7 col-xs-12 company-block">
+                <h2 class="col-xs-12">專業服務 只有日盛</h2>
+                <p class="col-xs-12">預約開戶可電恰就近分公司，或來電網路服務專線，將有專人迅速為您服務～</p>
+                <a href="http://www.jihsun.com.tw/md/event/jsun_school/contactus.html" title="日盛服務據點網頁連結" target="_blank" class="col-xs-6">
+                    <img src="img/jsun-local-blue.png" alt="查詢服務據點圖示"> 查詢服務據點
+                </a>
+                <a href="https://www.jihsun.com.tw/md/event/jsun_school/index.html" title="日盛理財學院網站連結" target="_blank" class="col-xs-6">
+                    <img src="img/jsunbook.png" alt="日盛理財學院圖示"> 日盛理財學院
+                </a>
+            </div>
+
+            <div class="col-sm-5 col-xs-12 company-block">
+                <img src="img/company-info-img.png" alt="" class="img-responsive com-big-img" title="日盛吉祥物，預約開戶可電恰就近分公司，或來電網路服務專線，將有專人迅速為您服務圖示">
+            </div>
+
+        </div><!--row end-->
+    </div>
+
+    <!-- footer -->
+    <footer class="container-fluid footer-list wow fadeIn">
+        <footer class="container">
+            <div class="row">
+                <ul class="">
+                    <li class="visible-xs">Copyright 2019 日盛證券股份有限公司<br>Jih Sun Securities Co.,Ltd.</li>
+                    <li class="hidden-xs">Copyright 2019 日盛證券股份有限公司　Jih Sun Securities Co.,Ltd.</li>
+                    <li>台北市南京東路二段 111 號 3、4樓</li>
+                    <li class="visible-xs">客戶服務專線: 0800-088-268<br>(週一至週五早上八點至晚間十點)</li>
+                    <li class="hidden-xs">客戶服務專線: 0800-088-268 (週一至週五早上八點至晚間十點)</li>
+                </ul>
+            </div>
+        </footer>
+    </footer>
+
+    <!-- 原Top Button-->
+    <!--
+    <aside class="scroll-top">
+        <a class="btn mybtn-top" href="javascript" onclick="$('html,body').animate({ scrollTop: $('html').offset().top}, 'slow'); return false;">
+            <i class="myfa fa fa-chevron-up"></i>
+        </a>
+    </aside>
+    -->
+    <!-- 會員側邊欄 -->
+    <aside class="scroll-fix">
+        <a id="BusinessCard" href="#">
             <i class="glyphicon glyphicon-user"></i>
             <p>我要</p>
             <p>開戶</p>
         </a>
 
-        <a id="shareFB" href="https://www.facebook.com/Jihsunny/" target="_blank" runat="server" data-group="ga" data-key="FB分享">
-            <img src="img/jsun-fb.png" alt="" />
+        <a id="FBShare" href="#" target="_blank" class="hidden">
+            <img src="img/jsun-fb.png" alt="">
         </a>
 
-        <a id="shareLine" href="https://www.jihsun.com.tw/Static/JsunLine" target="_blank" runat="server" data-group="ga" data-key="LINE分享">
-            <img src="img/jsun-line.png" alt="" />
+        <a id="LineShare" href="#" target="_blank" class="hidden">
+            <img src="img/jsun-line.png" alt="">
         </a>
 
-        <hr />
+        <hr>
 
         <a href="#" onclick="$('html,body').animate({ scrollTop: $('html').offset().top}, 'slow'); return false;">
             <i class="glyphicon glyphicon-triangle-top"></i>
         </a>
     </aside>
+	
+	<div class="lion">
+		<a id="teacherJsun" onclick="window.open('http://vmjsmoney/CTIChat/Chat.aspx','Teacher',config='height=720,width=448,location=no,toolbar=no,menubar=no,status=no,scrollbars=no')">
+			<img src="img/teacher.png" alt="日盛知多獅">
+		</a>
+	</div>
+
+    <!--js區 分隔線-->
+    <!--js-->
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--js plugin-->
+    <!--等高插件jQuery Equal Height 官方網址-- https://github.com/susonwaiba/jquery-equal-height-->
+    <script src="js/jquery-equal-height.min.js"></script>
+    <!--背景vedio插件 官方網址-- https://github.com/souravm84/vidbacking-->
+    <script src="js/jquery.vidbacking.min.js"></script>
+    <!--輪播owl.carousel插件 官方網址-- https://owlcarousel2.github.io/OwlCarousel2/demos/demos.html-->
+    <script src="js-plugin/owl-carousel/owl.carousel.min.js"></script>
+    <!--滾動效果wow.js插件 官方網址-- https://wowjs.uk/-->
+    <script src="js-plugin/wow.min.js"></script>
+
+    <!--js撰寫區-->
+    <script src="js/all.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var url = 'http://vmjsmarket.jihsun.com.tw/MarketNet/BusinessCard/card.aspx';
+            var check = 'N';
+            var a = getQueryVariable('BranchID');
+            if (a != "" && a != null) {
+                url += '?BranchID=' + a;
+                check = 'Y';
+            }
+            var b = getQueryVariable('Empno');
+            if (b != "" && b != null) {
+                url += '?Empno=' + b;
+                check = 'Y';
+            }
+            if (check = 'Y') {
+                var BusinessCard = document.getElementById("BusinessCard");
+                BusinessCard.setAttribute('href', url);
+                //var FBShare = document.getElementById("FBShare");
+                //FBShare.setAttribute('href', 'https://www.facebook.com/sharer.php?u=' + url);
+                //var LineShare = document.getElementById("LineShare");
+                //LineShare.setAttribute('href', 'https://line.naver.jp/R/msg/text/?' + url);
+            }
+            //var adurl = 'https://vmjsmarket.jihsun.com.tw/MarketNet/BusinessCard/GetADLink.ashx?Style=';
+            //$.ajax({
+            //    type: "GET",
+            //    url: adurl + "0",
+            //    contentType: "application/json; charset=utf-8",
+            //    dataType: "json",
+            //    success: function (AjaxResponse) {
+            //        var url0 = document.getElementById("url0");
+            //        url0.setAttribute('src', AjaxResponse);
+            //    }
+            //});
+            //$.ajax({
+            //    type: "GET",
+            //    url: adurl + "1",
+            //    contentType: "application/json; charset=utf-8",
+            //    dataType: "json",
+            //    success: function (AjaxResponse) {
+            //        var url1 = document.getElementById("url1");
+            //        url1.setAttribute('src', AjaxResponse);
+            //    }
+            //});
+            //$.ajax({
+            //    type: "GET",
+            //    url: adurl + "2",
+            //    contentType: "application/json; charset=utf-8",
+            //    dataType: "json",
+            //    success: function (AjaxResponse) {
+            //        var url2 = document.getElementById("url2");
+            //        url2.setAttribute('src', AjaxResponse);
+            //    }
+            //});
+            //$.ajax({
+            //    type: "GET",
+            //    url: adurl + "3",
+            //    contentType: "application/json; charset=utf-8",
+            //    dataType: "json",
+            //    success: function (AjaxResponse) {
+            //        var url3 = document.getElementById("url3");
+            //        url3.setAttribute('src', AjaxResponse);
+            //    }
+            //});
+            $.ajax({
+                type: "GET",
+                url: "https://vmjsmarket.jihsun.com.tw/MarketNet/api/EPostActivety/ActivetyList?CategoryId=3&notExipredOnly=true",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (AjaxResponse) {
+                    $.each(AjaxResponse.EPostActivetyList, function (index, value) {
+                        var linkUrl = (this.LinkUrl == null || this.LinkUrl == "") ? "#" : this.LinkUrl;
+                        var fileTitle = (this.UploadFile1_Title == null || this.UploadFile1_Title == "") ? this.Subject : this.UploadFile1_Title;
+                        //創Div
+                        var sonDiv = document.createElement("div");
+                        sonDiv.className = "item";//给子sonDiv设置class属性
+                        //創連結
+                        var sonAnchor = document.createElement("a");
+                        sonAnchor.className = "img-head EqualHeight";
+                        sonAnchor.setAttribute('href', linkUrl);
+                        sonAnchor.setAttribute('title', fileTitle);
+                        sonDiv.appendChild(sonAnchor);
+                        //創圖片
+                        var sonImg = document.createElement("img");
+                        sonImg.className = "slide-img";
+                        sonImg.setAttribute('src', 'data:image/png;base64,' + this.UploadFile1);
+                        sonImg.setAttribute('alt', fileTitle);
+                        sonAnchor.appendChild(sonImg);
+                        //創H5
+                        var sonH5 = document.createElement("h5");
+                        sonH5.innerText = fileTitle;
+                        sonDiv.appendChild(sonH5);
+                        //創p
+                        var sonP = document.createElement("p");
+                        sonP.innerText = this.Description;
+                        sonDiv.appendChild(sonP);
+                        $('#Activety').owlCarousel().trigger('add.owl.carousel', sonDiv).trigger('refresh.owl.carousel');
+                    });
+                }
+            });
+        });
+        function getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] == variable) { return pair[1]; }
+            }
+            return (false);
+        }
+    </script>
+
 </body>
 </html>
